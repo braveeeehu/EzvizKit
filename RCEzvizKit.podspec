@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'EzvizKit'
+  s.name             = 'RCEzvizKit'
   s.version          = '0.2.0'
   s.summary          = 'A short description of EzvizKit.'
 
