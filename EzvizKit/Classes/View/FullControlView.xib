@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="FullControlView" id="iN0-l3-epB" customClass="FullControlView">
+            <rect key="frame" x="0.0" y="0.0" width="546" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTb-wc-a2v">
+                    <rect key="frame" x="90" y="25" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="V1d-Ti-HSJ"/>
+                        <constraint firstAttribute="width" constant="50" id="gsf-IB-ZuR"/>
+                    </constraints>
+                    <state key="normal" image="sound_off"/>
+                    <state key="selected" image="sound_on"/>
+                    <state key="highlighted" image="preview_play_btn_sel"/>
+                    <connections>
+                        <action selector="muteAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dvv-H5-EX7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXA-7A-9Zw">
+                    <rect key="frame" x="160" y="25" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="pJd-b5-Fes"/>
+                        <constraint firstAttribute="height" constant="50" id="vUy-2V-98l"/>
+                    </constraints>
+                    <state key="normal" image="play_full_previously"/>
+                    <state key="highlighted" image="preview_play_btn_sel"/>
+                    <connections>
+                        <action selector="captureAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vei-m1-62g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5h-05-mfx">
+                    <rect key="frame" x="230" y="25" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="MYF-di-1Ei"/>
+                        <constraint firstAttribute="width" constant="50" id="nLl-F7-lNe"/>
+                    </constraints>
+                    <state key="normal" image="play_full_video"/>
+                    <state key="selected" image="play_full_video_now"/>
+                    <state key="highlighted" image="preview_play_btn_sel"/>
+                    <connections>
+                        <action selector="videoAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="6MK-US-cdr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyN-Yx-7S6">
+                    <rect key="frame" x="300" y="25" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9Rr-bS-8iQ"/>
+                        <constraint firstAttribute="width" constant="50" id="VJ8-Fw-hAf"/>
+                    </constraints>
+                    <state key="normal" image="yuntai_normal"/>
+                    <state key="selected" image="yuntai_pressed"/>
+                    <state key="highlighted" image="preview_play_btn_sel"/>
+                    <connections>
+                        <action selector="ptzAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vm4-Wz-ix4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A42-jw-4as">
+                    <rect key="frame" x="20" y="25" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Ubc-kq-mxR"/>
+                        <constraint firstAttribute="height" constant="50" id="ZSv-ch-vt8"/>
+                    </constraints>
+                    <state key="normal" image="play_full_stop"/>
+                    <state key="selected" image="play_full_play"/>
+                    <state key="highlighted" image="preview_play_btn_sel"/>
+                    <connections>
+                        <action selector="playAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="hYS-pU-m2B"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gyN-Yx-7S6" firstAttribute="leading" secondItem="T5h-05-mfx" secondAttribute="trailing" constant="20" id="7fh-gY-abz"/>
+                <constraint firstItem="zXA-7A-9Zw" firstAttribute="leading" secondItem="GTb-wc-a2v" secondAttribute="trailing" constant="20" id="AfA-bp-RfB"/>
+                <constraint firstItem="T5h-05-mfx" firstAttribute="centerY" secondItem="zXA-7A-9Zw" secondAttribute="centerY" id="F3u-NP-HlR"/>
+                <constraint firstItem="zXA-7A-9Zw" firstAttribute="centerY" secondItem="GTb-wc-a2v" secondAttribute="centerY" id="GM6-6T-LfF"/>
+                <constraint firstItem="A42-jw-4as" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="J9s-bX-IMj"/>
+                <constraint firstItem="gyN-Yx-7S6" firstAttribute="centerY" secondItem="T5h-05-mfx" secondAttribute="centerY" id="NOs-Eh-exm"/>
+                <constraint firstItem="T5h-05-mfx" firstAttribute="leading" secondItem="zXA-7A-9Zw" secondAttribute="trailing" constant="20" id="NZz-Pt-GEi"/>
+                <constraint firstItem="A42-jw-4as" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="efq-gg-3uy"/>
+                <constraint firstItem="GTb-wc-a2v" firstAttribute="leading" secondItem="A42-jw-4as" secondAttribute="trailing" constant="20" id="q5o-Wr-nkD"/>
+                <constraint firstItem="GTb-wc-a2v" firstAttribute="centerY" secondItem="A42-jw-4as" secondAttribute="centerY" id="s5x-7t-7gd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="captureBtn" destination="zXA-7A-9Zw" id="LDj-yA-vkC"/>
+                <outlet property="muteBtn" destination="GTb-wc-a2v" id="xT0-JZ-OKt"/>
+                <outlet property="playBtn" destination="A42-jw-4as" id="E8C-09-cMh"/>
+                <outlet property="ptzBtn" destination="gyN-Yx-7S6" id="Ukn-Ip-JvA"/>
+                <outlet property="videoBtn" destination="T5h-05-mfx" id="L9W-NJ-UKV"/>
+            </connections>
+            <point key="canvasLocation" x="207.24637681159422" y="454.01785714285711"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2V-Tw-tUC">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="42"/>
+            <constraints>
+                <constraint firstAttribute="height" constant="37" id="sh9-rx-NP3"/>
+            </constraints>
+            <state key="normal" image="preview_play_btn"/>
+            <state key="highlighted" image="preview_play_btn_sel"/>
+            <point key="canvasLocation" x="142.75362318840581" y="275.89285714285711"/>
+        </button>
+    </objects>
+    <resources>
+        <image name="play_full_play" width="100" height="100"/>
+        <image name="play_full_previously" width="100" height="100"/>
+        <image name="play_full_stop" width="100" height="100"/>
+        <image name="play_full_video" width="100" height="100"/>
+        <image name="play_full_video_now" width="100" height="100"/>
+        <image name="preview_play_btn" width="37" height="37"/>
+        <image name="preview_play_btn_sel" width="37" height="37"/>
+        <image name="sound_off" width="100" height="100"/>
+        <image name="sound_on" width="100" height="100"/>
+        <image name="yuntai_normal" width="100" height="100"/>
+        <image name="yuntai_pressed" width="100" height="100"/>
+    </resources>
+</document>

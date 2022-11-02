@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EzvizKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A short description of EzvizKit.'
 
 # This description is used to generate tags and improve search results.
@@ -25,13 +25,16 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'hujiao' => 'hujiao@ricent.com' }
-  s.source           = { :git => 'https://github.com/hujiao/EzvizKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/braveeeehu/EzvizKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'EzvizKit/Classes/**/*'
-  
+  s.vendored_frameworks = 'Frameworks/*.framework'
+  s.resources = ['EzvizKit/Assets/*.*']
+  s.ios.dependency 'Masonry'
+
   # s.resource_bundles = {
   #   'EzvizKit' => ['EzvizKit/Assets/*.png']
   # }
@@ -39,4 +42,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
